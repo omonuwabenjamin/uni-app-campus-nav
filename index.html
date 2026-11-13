@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Navigator</title>
+    <meta
+      name="description"
+      content="University campus navigator for locating buildings, amenities, and routes."
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <p class="eyebrow">University</p>
+          <h1>Campus Navigator</h1>
+        </div>
+
+        <label class="search-box" for="searchInput">
+          <span>Search building</span>
+          <input id="searchInput" type="text" placeholder="e.g. Library or Halls" />
+        </label>
+
+        <div class="section-header">
+          <h2>Buildings</h2>
+        </div>
+        <ul id="buildingList" class="building-list"></ul>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Wayfinding</p>
+            <h2 id="selectedName">North Hall</h2>
+          </div>
+          <button id="routeButton" class="route-button">Show fastest route</button>
+        </header>
+
+        <section class="map-panel">
+          <div class="map-grid" id="mapGrid" aria-label="Campus map"></div>
+        </section>
+
+        <section class="details-panel">
+          <div class="info-card">
+            <p class="eyebrow">Details</p>
+            <h3 id="buildingType">Accommodation</h3>
+            <p id="buildingDescription">
+              Residence halls with social lounges and student services.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <p class="eyebrow">Quick access</p>
+            <ul id="buildingMeta" class="meta-list"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
